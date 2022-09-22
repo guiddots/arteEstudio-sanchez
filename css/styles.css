@@ -59,6 +59,7 @@ html {
 .banner h1 {
   display: flex;
   width: 100%;
+  margin: auto;
   flex: 1;
   justify-content: flex-end;
   color: white;
@@ -87,9 +88,10 @@ html {
 #nosotros {
   display: flex;
   width: 100%;
+  flex: 1;
   margin: auto;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 280px;
   background-image: linear-gradient(to left, rgba(215, 210, 204, 0.089) 0%, #304352 100%); }
   #nosotros .texto {
     width: 100%;
@@ -105,18 +107,84 @@ html {
       margin-left: 10px; }
     #nosotros .texto h2 {
       margin-left: 10px;
-      font-size: 60px;
       margin-top: 15px;
       text-transform: uppercase; }
   #nosotros .foto {
     filter: grayscale(100%);
+    width: 50%;
+    display: flex;
+    margin: auto;
     padding-right: 20px;
     padding-left: 20px; }
 
-.slider-responsive {
+#seccion-obra {
+  background-image: linear-gradient(to left, rgba(215, 210, 204, 0.089) 0%, #304352 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
+  margin: auto; }
+  #seccion-obra .slider-obra {
+    width: 40%;
+    margin: auto;
+    margin-left: 60px;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 150px; }
+    #seccion-obra .slider-obra ul {
+      display: flex;
+      padding: 0;
+      width: 400%;
+      animation: slide 20s infinite alternate;
+      animation-timing-function: ease-in; }
+    #seccion-obra .slider-obra li {
+      width: 100%;
+      list-style: none; }
+    #seccion-obra .slider-obra img {
+      width: 100%; }
+
+#seccion-obra .slider-obra-texto {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  background-color: black;
+  color: white;
+  margin: 70px;
+  border-radius: 15px;
+  border-style: solid inset solid solid; }
+  #seccion-obra .slider-obra-texto p {
+    margin-left: 10px; }
+  #seccion-obra .slider-obra-texto h2 {
+    margin-left: 10px;
+    margin-top: 15px;
+    text-transform: uppercase; }
+
+@keyframes slide {
+  0% {
+    margin-left: 0; }
+  20% {
+    margin-left: 0; }
+  25% {
+    margin-left: -100%; }
+  45% {
+    margin-left: -100%; }
+  50% {
+    margin-left: -200%; }
+  70% {
+    margin-left: -200%; }
+  75% {
+    margin-left: -300%; }
+  100% {
+    margin-left: -300%; } }
+
+.slider-responsive {
+  width: 70%;
   margin: auto;
   overflow: hidden;
+  padding-top: 50px;
+  padding-bottom: 150px;
   display: none; }
   .slider-responsive ul {
     display: flex;
@@ -153,16 +221,31 @@ html {
   margin: auto;
   flex: 1;
   background-image: linear-gradient(to left, rgba(215, 210, 204, 0.089) 0%, #304352 100%); }
+  .grillafondo .titulo-grilla {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: black;
+    color: white;
+    margin: auto;
+    border-radius: 15px;
+    border-style: solid inset solid solid; }
+    .grillafondo .titulo-grilla .h2 {
+      width: 100%;
+      margin: auto; }
 
 .grilla {
-  width: 100%;
+  width: 90%;
   margin: auto;
-  flex: 1;
   display: grid;
+  justify-self: center;
   grid-template-columns: 100px 200px 100px 200px;
   grid-template-rows: 100px 100px 100px 100px;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 250px;
   grid-template-areas: "grilla1 grilla2 grilla2 grilla3 grilla4 grilla4" "grilla5 grilla5 grilla6 grilla7 grilla7 grilla8" "grilla9 grilla10 grilla11 grilla12 grilla13 grilla14" "grilla15 grilla15 grilla15 grilla16 grilla16 grilla16"; }
   .grilla > div {
     border: 3px solid rgba(0, 0, 0, 0.2);
@@ -178,68 +261,76 @@ html {
     visibility: hidden; }
 
 .grilla1 {
-  grid-area: grilla1;
-  background-image: url(../logos/grillacuadrada1.jpg); }
+  grid-area: grilla1; }
 
 .grilla2 {
-  grid-area: grilla2;
-  background-image: url(../logos/grillacuadrada2.jpg); }
+  grid-area: grilla2; }
 
 .grilla3 {
-  grid-area: grilla3;
-  background-image: url(../logos/grillahorizontal3.jpg); }
+  grid-area: grilla3; }
 
 .grilla4 {
-  grid-area: grilla4;
-  background-image: url(../logos/grillahorizontal4.jpg); }
+  grid-area: grilla4; }
 
 .grilla5 {
-  grid-area: grilla5;
-  background-image: url(../logos/grillahorizontal5.jpg); }
+  grid-area: grilla5; }
 
 .grilla6 {
-  grid-area: grilla6;
-  background-image: url(../logos/grillahorizontal6.jpg); }
+  grid-area: grilla6; }
 
 .grilla7 {
-  grid-area: grilla7;
-  background-image: url(../logos/grillahorizontal7.jpg); }
+  grid-area: grilla7; }
 
 .grilla8 {
-  grid-area: grilla8;
-  background-image: url(../logos/grillahorizontal8.jpg); }
+  grid-area: grilla8; }
 
 .grilla9 {
-  grid-area: grilla9;
-  background-image: url(../logos/grillahorizontal9.jpg); }
+  grid-area: grilla9; }
 
 .grilla10 {
-  grid-area: grilla10;
-  background-image: url(../logos/grillahorizontal10.jpg); }
+  grid-area: grilla10; }
 
 .grilla11 {
-  grid-area: grilla11;
-  background-image: url(../logos/grillahorizontal11.jpg); }
+  grid-area: grilla11; }
 
 .grilla12 {
-  grid-area: grilla12;
-  background-image: url(../logos/grillahorizontal12.jpg); }
+  grid-area: grilla12; }
 
 .grilla13 {
-  grid-area: grilla13;
-  background-image: url(../logos/grillahorizontal13.jpg); }
+  grid-area: grilla13; }
 
 .grilla14 {
-  grid-area: grilla14;
-  background-image: url(../logos/grillahorizontal14.jpg); }
+  grid-area: grilla14; }
 
 .grilla15 {
-  grid-area: grilla15;
-  background-image: url(../logos/grillahorizontal15.jpg); }
+  grid-area: grilla15; }
 
 .grilla16 {
-  grid-area: grilla16;
-  background-image: url(../logos/grillahorizontal16.jpg); }
+  grid-area: grilla16; }
+
+.comentarios-clientes .titulo-comentarios {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex: 1;
+  background-color: black;
+  color: white;
+  margin: auto;
+  border-radius: 15px;
+  border-style: solid inset solid solid; }
+  .comentarios-clientes .titulo-comentarios .h2 {
+    width: 100%;
+    margin: auto; }
+
+.comentarios-clientes .text-center {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px; }
+  .comentarios-clientes .text-center .card-body > a {
+    width: 100%;
+    margin: auto; }
 
 #premios {
   display: flex;
@@ -251,6 +342,7 @@ html {
   #premios .textopremios {
     display: flex;
     width: 100%;
+    margin: auto;
     flex-wrap: wrap;
     flex: 1;
     background-color: black;
@@ -262,10 +354,11 @@ html {
       margin-left: 10px; }
     #premios .textopremios h2 {
       margin-left: 10px;
-      font-size: 60px;
       margin-top: 15px;
       text-transform: uppercase; }
   #premios .foto-premios {
+    width: 50%;
+    margin: auto;
     padding-right: 20px;
     padding-left: 20px; }
 
@@ -279,6 +372,8 @@ footer {
     justify-content: space-around;
     margin: auto;
     margin-top: 40px; }
+    footer .contenedor-footer .logo-footer {
+      width: 350px; }
     footer .contenedor-footer .contacto-footer li {
       list-style: none; }
   footer .redes {
@@ -338,7 +433,7 @@ footer {
     border-bottom-right-radius: 50px;
     border: solid 3px #1BB589;
     margin: 10px; }
-    .hoja-contacto .formulario h1 {
+    .hoja-contacto .formulario h2 {
       text-align: center;
       font-size: 50px;
       margin-bottom: 25px;
@@ -396,7 +491,7 @@ footer {
 ::placeholder {
   color: white; }
 
-@media (max-width: 490px) {
+@media (max-width: 1199px) {
   #header .menu-bar .menu-responsive {
     display: inline-block; }
   #header .menu-bar ul {
@@ -408,9 +503,11 @@ footer {
   #nosotros {
     padding-top: 5px;
     flex-wrap: wrap;
-    text-align: center; }
+    justify-content: center; }
     #nosotros .foto {
       margin-left: 20px; }
+  #seccion-obra {
+    flex-wrap: wrap; }
   .slider-responsive {
     display: block; }
   #proyectos .grilla {
@@ -418,11 +515,16 @@ footer {
   #premios {
     flex-wrap: wrap; }
     #premios img {
-      margin-left: 45px;
+      justify-content: center;
+      align-items: center;
+      /*margin-left: 45px;*/
       margin-bottom: 60px; }
   .footer .contenedor-footer .contacto-footer {
     text-align: center;
     flex-wrap: wrap; }
+  .footer .contenedor-footer .logo-footer {
+    width: 100%;
+    margin: auto; }
   .contenedor {
     flex-wrap: wrap; }
   .hoja-contacto {
